@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch using Html and Css</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        input {
+            display: none;
+        }
+
+
+        label {
+            height: 50px;
+            width: 100px;
+            background: #b8b8b8;
+            padding: 5px;
+            cursor: pointer;
+            position: relative;
+            transition: 0.5s all;
+            border-radius: 30px;
+        }
+
+        .slider {
+            transition: 0.5s all;
+            position: absolute;
+            height: 40px;
+            width: 40px;
+            background: #fff;
+            border-radius: 100%;
+        }
+
+        input:checked+label {
+            background-color: green;
+        }
+
+        input:checked+label>.slider {
+            transform: translateX(125%);
+        }
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" name="" id="checkbox">
+    <label for="checkbox">
+        <div class="slider"></div>
+    </label>
+</body>
+
+</html>
